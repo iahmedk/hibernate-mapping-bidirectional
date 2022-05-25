@@ -22,7 +22,7 @@ public class Vehicle {
 	// @OneToOne(cascade =
 	// {CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})//used to save
 	// child entity automatically once parent entity saved
-	@OneToOne(cascade = { CascadeType.ALL }) // used to save child entity automatically once
+	@OneToOne(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY) // used to save child entity automatically once
 																		// parent entity saved
 	@JoinColumn
 	Charcy charcy;
