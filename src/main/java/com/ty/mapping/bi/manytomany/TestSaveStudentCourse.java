@@ -62,12 +62,12 @@ public class TestSaveStudentCourse {
 
 		entityTransaction.begin();
 		entityManager.persist(student1);
-		entityManager.persist(course1);
-		entityManager.persist(course2);
+		//entityManager.persist(course1);
+		//entityManager.persist(course2);
 
 		entityManager.persist(student2);
-		entityManager.persist(course3);
-		entityManager.persist(course4);
+		//entityManager.persist(course3);
+//		/entityManager.persist(course4);
 
 		entityTransaction.commit();
 

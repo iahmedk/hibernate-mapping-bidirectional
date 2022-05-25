@@ -33,9 +33,9 @@ public class TestSaveMobileSim {
 		list.add(s3);
 
 		Mobile mobile = new Mobile();
-		mobile.setName("Sony");
+		mobile.setName("Mi");
 		mobile.setPrice(12000);
-		//mobile.setSim(list); It is optional
+		mobile.setSim(list);
 		
 		s1.setMobile(mobile);
 		s2.setMobile(mobile);
@@ -43,9 +43,10 @@ public class TestSaveMobileSim {
 		
 		entityTransaction.begin();
 		entityManager.persist(mobile);
-		entityManager.persist(s1);
-		entityManager.persist(s2);
-		entityManager.persist(s3);
+		//Saving sims explicitly not required since we are cascading
+		//entityManager.persist(s1);
+		//entityManager.persist(s2);
+		//entityManager.persist(s3);
 		entityTransaction.commit();
 		
 		System.out.println("***** Done *****");

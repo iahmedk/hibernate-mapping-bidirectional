@@ -2,6 +2,7 @@ package com.ty.mapping.bi.onetomany;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +18,7 @@ public class Mobile {
 	private String name;
 	private double price;
 
-	@OneToMany(mappedBy = "mobile")
+	@OneToMany(mappedBy = "mobile",cascade = CascadeType.ALL)
 	private List<Sim> sim;
 
 	public int getId() {
